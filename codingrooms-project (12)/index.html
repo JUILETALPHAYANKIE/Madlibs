@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" href="index.css"> 
+        <title>Mad libs</title>
+     <link rel="icon" type="photo" href="3webp">
+       
+    </head>
+    <body>
+<form id="myForm">
+<br><hr>
+<label for="fname">Name:</label>
+<br><hr>
+<input type="text" id="fname" name="fname">
+<br><hr>
+<label for="age">I am .. old?</label>
+<br><hr>
+<input type="text" id="age" name="fname">
+<br><hr>
+<label for="scary"> Scareiest thing?:</label>
+<br><hr>
+<input type="text" id="scary" name="scary">
+<br><hr>
+<label for="Noun">Noun:</label>
+<br><hr>
+<input type="text" id="noun" name="noun">
+<br><hr>
+<label for="item">Item:</label>
+<br>
+<input type="text" id="item" name="Iname">
+    <input type="submit" value="Go forward" />
+</form>
+<div id="formContents"></div>
+ <script>
+var form = document.getElementById("myForm");
+form.addEventListener("submit", function(event){
+event.preventDefault();
+var fname = document.getElementById("fname").value;
+var age = document.getElementById("age").value; 
+var scary = document.getElementById("scary").value; 
+var item = document.getElementById("item").value; 
+var noun = document.getElementById("noun").value; 
+var formContents = document.getElementById("formContents");
+formContents.innerHTML = "There was a person named "+ fname + ". They were " + age + ". They were scared of " + scary + ". When they heard a " + item + ". It was a ";
+});
+</script>
+ <hr>
+ <marquee> Choose Well </marquee>
+ <hr>
+<div class="bottom-left"> <img src="madlibs.png" alt="Madlibs" width="300" height="40">
+    </body>
+</html>
